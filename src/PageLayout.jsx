@@ -1,11 +1,15 @@
 import { BrowserRouter, Outlet, Router,Link} from "react-router-dom";
 
 export default function PageLayout() {
+    const Username = "CbShuiMu"
     return (
-        <div className="container">
+        <div>
             <header>
-                <h1>CbShuiMu</h1>
+                <h1>Welcome {Username}</h1>
                 <img src="https://shuimucage-public.s3.ap-southeast-2.amazonaws.com/Ame.jpg"></img>
+                <ul>
+                    <li><Link to="/StudyCenter">StudyCenter</Link></li>
+                </ul>
             </header>
             <Outlet/>
         </div>
