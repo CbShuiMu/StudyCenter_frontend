@@ -11,7 +11,12 @@ export default function PageLayout() {
                     <li><Link to="/StudyCenter">StudyCenter</Link></li>
                 </ul>
             </header>
+            <main>
             <Outlet/>
+            </main>
+            <footer>
+                <h1>GoogleBye {Username}</h1>
+            </footer>
         </div>
     );
 }

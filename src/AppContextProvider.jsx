@@ -12,7 +12,7 @@ function AppContextProvider({children}){
     ];
 
     const [todos,setTodos] = useState(initialTodos);
-
+    const [InputValue, setInputValue] = useState('');
 
     const handleTodoStatusChanged = (index, isComplete) => {
     
@@ -53,7 +53,7 @@ function AppContextProvider({children}){
     }
 
     const context = {
-        todos,setTodos,useLocalStorage,handleTodoStatusChanged,deleteTodo
+        todos,InputValue,setInputValue,setTodos,useLocalStorage,handleTodoStatusChanged,deleteTodo,addTodo
     }
 
     return (

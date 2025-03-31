@@ -7,21 +7,16 @@
     background-color: peru;
     position: absolute;
     border-radius: 12px;
-    left:45vw;
+    left:40vw;
 }
 .input{
     width: max-content;
 }
 
-
 .li{
     line-height: 50px;
-    width: 500px;
+    width: 30vw;
     background-color: hotpink;
     margin: 10px;
     border-radius: 12px;
-}
-
-.ul{
-    position:absolute;
 }

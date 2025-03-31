@@ -7,6 +7,7 @@ export default function ToDoList() {
     const appcontext = useContext(AppContext)
     console.log(appcontext)
     const todos=appcontext.todos;
+    const InputValue=appcontext.InputValue;
     console.log(todos)
 
     const TaskList = todos.map((todo,index)=>(
@@ -21,8 +22,11 @@ export default function ToDoList() {
     ));
 
     return (
-        <ul className={styles.ul}>
+        <ul>
             {TaskList}
+            <li>
+                <input defaultValue={InputValue} onChange={e => appcontext.setInputValue(e.target.value)} type="text"/><button onClick={()=>appcontext.addTodo(InputValue)} >sumbit</button>
+            </li>
         </ul>
     );
 };
