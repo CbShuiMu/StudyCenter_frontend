@@ -1,10 +1,11 @@
 import ToDoList from "./component/ToDoList";
+import styles from "./StudyCenter.module.css"
 
 export default function StudyCenter() {
 
     return (
-        <div className="container">
-            <h1>Everyday_Study_Log</h1>
+        <div className={styles.StudyCenter}>
+            <h1>Study Log</h1>
             <ToDoList/>
         </div>
     );

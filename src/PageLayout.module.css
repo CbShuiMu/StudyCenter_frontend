@@ -3,24 +3,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    /* background-color: black; */
     margin: 0;
     border: 0;
     padding: 0;
 }
 
 .PageLayout header{
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
+    background-color: #2BA2FB;
+    position: fixed;
+    top:0;
     width: 100vw;
+    height: 60px;
     margin: 0;
     border: 0;
     padding: 0;
 }
 
-.PageLayout header ul{
+.PageLayout header text{
+    font-size: 25px;
+    font-weight: bold;
     /* background-color: blue; */
 }
 
@@ -29,12 +35,20 @@
     margin: 10px 20px;
 } */
 
-.PageLayout header img{
-    position:absolute;
-    right:2vw;
-    width: 60px;
-    border-radius: 30px;
+.PageLayout main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top:60px;
+    width: 100vw;
+    background:
+    linear-gradient(to top,
+    rgba(43,162,251, 0.9),
+    rgba(253,253,253, 0.4));
 }
+
 
 .PageLayout footer li button{
     background-color: transparent;
@@ -52,6 +66,14 @@
 }
 
 
+.PageLayout footer div > img{
+    position:absolute;
+    right:1vw;
+    width: 50px;
+    border-radius: 25px;
+}
+
+
 .PageLayout footer div{
     display: flex;
     align-items: center;
@@ -59,10 +81,11 @@
 }
 
 .PageLayout footer{
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     bottom: 3vh;
     height: 70px;
     width: 100vw;
@@ -74,5 +97,5 @@
 
 .PageLayout h3{
     position: absolute;
-    bottom: -1vh;
+    bottom: -1.5vh;
 }

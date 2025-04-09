@@ -1,7 +1,7 @@
 import styles from "./PageLayout.module.css"
 import { motion } from "motion/react"
 import { useState, useRef, useEffect } from "react"
-import { BrowserRouter, Outlet, Router, Link,useNavigate } from "react-router-dom";
+import { BrowserRouter, Outlet, Router, Link, useNavigate } from "react-router-dom";
 
 
 export default function PageLayout() {
@@ -42,12 +42,12 @@ export default function PageLayout() {
         <div className={styles.PageLayout}>
             <header>
 
-                <h1>Welcome {Username}</h1>
+                <text>Welcome {Username}</text>
                 {/* <ul>
                     <li><Link to="/AboutMe">AboutMe</Link></li>
                     <li><Link to="/StudyCenter">StudyCenter</Link></li>
                 </ul> */}
-                <img src="https://shuimucage-public.s3.ap-southeast-2.amazonaws.com/Ame.jpg"/>
+
             </header>
             <main>
                 <Outlet />
@@ -70,12 +70,13 @@ export default function PageLayout() {
                                 ref={(el) => (buttonRefs.current[path] = el)}
                                 onClick={() => navTo(path)}
                             >
-                                <img src={`/${path}.svg`} />
+                                <img className={styles.buttonIcon} src={`/${path}.svg`} />
                                 <br />
                                 {path}
                             </button>
                         </li>
                     ))}
+                    <img src="https://shuimucage-public.s3.ap-southeast-2.amazonaws.com/Ame.jpg" />
                 </div>
             </footer>
             <h3>GoogleBye {Username}</h3>
